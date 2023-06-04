@@ -1,0 +1,80 @@
+@charset "UTF-8";
+:root {
+  --primary-color: #252525 !important;
+  --secondary-color:#f8f8f8 !important;
+  --pal0-color:#ff004f !important;
+  --pal1-color: #ababab !important;
+  --border0-color : rgba(255, 255, 255, 0.12)!important;
+  --border1-color : rgba(255,255,255,.4)!important;
+  --border2-color : rgba(255,255,255,.8)!important;
+  
+  --hover0-color:#a3f1a4 !important;
+  --hover1-color:#8A2EFF !important;
+  --hover2-color:rgba(233,40,201,0.8) !important;
+  --border4-color:#1b9bff !important;
+  
+}
+
+#menu {
+  vertical-align: top;
+  display: inline-block;
+  width: 20%;  
+  color: var(--primary-color);
+}
+
+
+.filterselect{
+  padding:5%;
+}
+
+.filterselect input, .filterselect select {
+    display: block;
+    width: 100%;
+    scrollbar-width: thin;
+    border: none;
+    margin: none;
+    padding:none;
+    padding-left:1%;
+    cursor:pointer;
+    background-color: var(--border2-color);
+    color: var(--secondary-color);
+}
+
+.filterselect p{ 
+  font: 10px ;
+  margin : 0px;
+  padding:0px;
+}
+
+
+.filterlabel {
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+  padding-top:3%;
+  padding-left:0.2rem;
+  text-transform: capitalize;
+  color:var(--secondary-color); 
+}
+
+
+.filterlabel + .filterlabel {
+    clear: none;
+    text-align: right;
+    color:var(--secondary-color);
+    padding:0;
+    margin:0;
+    cursor: pointer;
+}
+
+
+.filterlabel + .filterlabel:hover {
+    color:var(--hover0-color);
+    background-color:var(--border1-color);
+
+}
+
+.slider {
+  font-size: 10px; 
+}
+

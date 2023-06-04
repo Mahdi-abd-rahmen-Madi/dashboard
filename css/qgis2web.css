@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #252525 !important;
+    --secondary-color:#f8f8f8 !important;
+    --pal0-color:#ff004f !important;
+    --pal1-color: #ababab;
+ 
+    --border1-color:#1b9bff !important;
+  
+    --hover0-color:#a3f1a4 !important;
+    --hover1-color:#8A2EFF !important;
+    --hover2-color:rgba(233,40,201,0.8) !important;  
+  }
+
+#map {
+    background-color: var(--secondary-color);
+}
+th {
+    text-align: left;
+    vertical-align: top;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px "Libre Baskerville", serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial;
+    background: var(--secondary-color);
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h2 {
+    margin: 0 0 5px;
+    color: var(--pal1-color);
+}
+.leaflet-container {
+    background: var(--secondary-color);
+    padding-right: 10px;
+}
+.leaflet-popup-content {
+    width:auto;
+    padding-right:10px;
+}
+.leaflet-tooltip {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+.leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
+    border: 0px;
+}
+
+.fa, .leaflet-container {
+    color: var(--primary-color) !important;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out,
+.leaflet-control-locate a,
+.leaflet-touch .leaflet-control-geocoder-icon,
+.leaflet-control-search .search-button,
+ .leaflet-control-measure {
+    background-color: var(--secondary-color) !important;
+    border-radius: 0px !important;
+    color: var(--primary-color) !important;
+}
+.abstract {
+    font: bold 18px 'Lucida Console', Monaco, monospace;
+    text-indent: 1px;
+    background-color: var(--secondary-color) !important;
+    width: 30px !important;
+    color: var(--primary-color) !important;
+    height: 30px !important;
+    text-align: center !important;
+    line-height: 30px !important;
+}
+.abstractUncollapsed {
+    padding: 6px 8px;
+    font: 12px/1.5 "Libre Baskerville", serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial;
+    background-color:var(--secondary-color) !important;
+    color: #000000 !important;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    max-width: 40%;
+}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar,
+.leaflet-control-search,
+.leaflet-control-measure {
+    border: 4px solid rgba(255,255,255,.4) !important;
+    background-color: rgba(255,255,255,.8) ;
+
+}
+
+.leaflet-control-attribution a {
+    color: #0078A8 !important;
+}
+.leaflet-control-scale-line {
+    border: 2px solid var(--secondary-color) !important;
+    border-top: none !important;
+    color: var(--primary-color) !important;
+}
+.leaflet-control-search .search-button,
+.leaflet-container .leaflet-control-search,
+.leaflet-control-measure {
+    box-shadow: none !important;
+}
+.leaflet-control-search .search-button {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+    text-align: center !important;
+    line-height: 30px !important;
+}
+.leaflet-control-measure .leaflet-control {
+    width: 30px !important;
+    height: 30px !important;
+}
+.leaflet-container .leaflet-control-search{
+    background: none !important;
+}
+.leaflet-control-search .search-input {
+    margin: 0px 0px 0px 0px !important;
+    height: 30px !important;
+}
+.leaflet-control-measure {
+    background: none!important;
+    border-radius: 4px !important;
+}
+.leaflet-control-measure .leaflet-control-measure-interaction {
+    background-color: var(--secondary-color) !important;
+}
+.leaflet-touch .leaflet-control-measure
+.leaflet-control-measure-toggle,
+.leaflet-touch .leaflet-control-measure
+.leaflet-control-measure-toggle:hover {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 0px !important;
+    background-color:var(--secondary-color) !important;
+    color: #000000 !important;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+    text-indent: 0%;
+}
+.leaflet-control-layers-toggle {
+    background-color:var(--secondary-color)!important;
+}
