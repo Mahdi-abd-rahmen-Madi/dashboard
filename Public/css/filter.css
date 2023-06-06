@@ -24,9 +24,18 @@
   color: var(--primary-color);
 }
 
+#menu1 { 
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;  
+  color: var(--primary-color);
+  padding:5%
+}
+
+
 
 .filterselect{
-  padding:5%;
+  padding:5px;
 }
 
 .filterselect input, .filterselect select {
@@ -56,7 +65,7 @@
   font-size: 12px;
   margin: 0px;
   padding: 0px;
-  padding-top:3%;
+  padding-top:5px;
   padding-left:0.2rem;
   text-transform: capitalize;
   color:var(--secondary-color); 
