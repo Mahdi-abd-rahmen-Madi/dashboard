@@ -34,7 +34,6 @@
       <nav data-toggled="false" data-transitionable="false">
         <div id="nav-logo-section" class="nav-section">
           <a href="#">
-            <i class="fa-solid fa-dumpster-fire"></i>
             <h4>Dashboard</h4>
           </a>
     
@@ -46,14 +45,14 @@
             <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#services">SERVICES</a>
           </div>
           <div id="nav-social-section" class="nav-section">
-            <a href="https://www.linkedin.com/in/mahdi-madi-a835a0188/" target="_blank" alt="linkedin">
+            <a href="https://www.linkedin.com/in/mahdi-madi-a835a0188/" title="linkedin"target="_blank" alt="linkedin">
               <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="https://github.com/Mahdi-abd-rahmen-Madi" target="_blank" alt="github">
+            <a href="https://github.com/Mahdi-abd-rahmen-Madi" title="GitHub" target="_blank" alt="github">
               <i class="fa-brands fa-github"></i>
             </a>    
-            <a href="mailto:mahdiabderrahmen@duck.com" alt="email">
-              <i class="fa-light fa-envelope"></i>
+            <a href="mailto:mahdiabderrahmen@duck.com" title="Reach out via email" alt="email">
+              <i class="fa-regular fa-envelope fa-bounce"></i>
             </a>
           </div>
           <div id="nav-contact-section" class="nav-section">
@@ -80,14 +79,14 @@
           </div>
           <div class="article-title-section article-section">
             <h2>Geological and geographical distribution of various deposits</h2>
-            <i class="fa-light fa-plus-large"></i>
+            <i class="fa-solid fa-plus"></i>
           </div>
           <div class="article-nav-section article-section">
             <button class="article-nav-button" type="button" onclick="handleLeftClick()">
-              <i class="fa-light fa-arrow-left-long"></i>
+              <i class="fa-solid fa-chevron-left"></i>
             </button>
             <button class="article-nav-button" type="button" onclick="handleRightClick()">
-              <i class="fa-light fa-arrow-right-long"></i>
+              <i class="fa-solid fa-chevron-right fa-fade"></i>
             </button>
           </div>
         </article>
@@ -324,8 +323,7 @@
                 },
                 mouseover: highlightFeature,
             });
-
-            // =========================================================== content : Stratigraphy popup ====================================
+// =========================================================== content : Stratigraphy popup ====================================
             /*
             var popupContent = '<table>\
                     <tr>\
@@ -338,7 +336,7 @@
             layer.bindPopup(popupContent, {maxHeight: 300});*/
         }
 
-        // ========================================================== content : stratigraphy styles ==========================================
+// ========================================================== content : stratigraphy styles ==========================================
 
         function style_stratigraphy_1_0(feature) {
             switch(String(feature.properties['age'])) {
@@ -526,6 +524,8 @@
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 350});
         }
+
+        // ====================================== content : deposits styles ============================
         function style_deposits_2_0(feature) {
             var context = {
                 feature: feature,
@@ -1471,6 +1471,7 @@
                 },
                 mouseover: highlightFeature,
             });
+            /*
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
@@ -1479,7 +1480,7 @@
                         <td colspan="2">' + (feature.properties['length'] !== null ? autolinker.link(feature.properties['length'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400});*/
         }
 
         function style_faults_3_0() {
@@ -1600,7 +1601,7 @@
                           features[i].properties[key])<0
                           && selection.length>0) {
                           features.splice(i,1);
-                          }
+                          }             
                         }
                       }
                     } catch(err){

@@ -141,11 +141,8 @@ h1, h2, h3, a, p, span {
   margin: 0px;
 }*/
 
-a {color:var(--secondary-color)!important;text-decoration:none;}
-
-a:hover {
-  color: var(--hover0-color)!important;
-}
+a {color:var(--secondary-color);text-decoration:none;}
+a:hover {color: var(--hover0-color);}
 
 /* ===================================================== default : ==================================================================== */
 
@@ -240,7 +237,7 @@ main > article {
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows:  94% 6%;
+  grid-template-rows:  9fr 1fr;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -338,7 +335,7 @@ main > article > .article-title-section * {
 }
 
 main > article > .article-title-section > h2 {
-  flex-basis: 100%;
+  flex-basis: 80%;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   line-height: 1.2rem;
@@ -348,7 +345,7 @@ main > article > .article-title-section > h2 {
 
 main > article > .article-title-section > i {
   color: var(--secondary-color)!important;
-  font-size:  4rem;
+  font-size:  2rem;
 }
 
 main > article > .article-nav-section > .article-nav-button {
@@ -369,7 +366,10 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   border-left: 1px solid var(--border0-color)!important;
 }
 
-
+.article-nav-button > i:hover {
+  scale: 1.5;
+}
+ 
 
 /* media queries for tablets : */
 
