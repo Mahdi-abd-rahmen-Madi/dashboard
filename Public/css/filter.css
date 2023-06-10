@@ -16,57 +16,71 @@
   --bg1-color : rgba(163, 241, 164, 0.25);
   
 }
-
+/*
 #menu {
   vertical-align: top;
   display: inline-block;
   width: 20%;  
   color: var(--primary-color);
+}*/
+
+#sidemenu {
+  display:grid;
+  grid-template-columns:  1fr 1fr;
 }
 
 #menu1 { 
-  vertical-align: top;
-  display: inline-block;
+  display: block;
+  padding:2%;
+  padding-top:10%;
   width: 100%;  
-  color: var(--primary-color);
-  padding:5%
+  border-right: 1px solid var(--border0-color);
+  overflow-y: auto;
+}
+#menu2 { 
+  padding:2%;
+  padding-top:10%;
+  color:var(--secondary-color);
 }
 
 
 
 .filterselect{
-  padding:5px;
+  padding:none;
 }
 
 .filterselect input, .filterselect select {
-    display: block;
+    display: inline-block;
     width: 100%;
     scrollbar-width: thin;
     border: none;
     margin: none;
     padding:none;
-    padding-left:1%;
-    cursor:pointer;
-    background-blend-mode: luminosity;
-    
-    background-color: whitesmoke;
-    color: var(--primary-color);
-    
+    padding-left:5px;
+    cursor:pointer;    
+    background-color: var(--border2-color);
 }
 
+.filterselect input:hover, .filterselect select:hover {
+  background-color: var(--hover0-color);
+
+}
+
+
 .filterselect p{ 
-  font: 10px ;
+  font: 12px ;
   margin : 0px;
   padding:0px;
 }
 
 
 .filterlabel {
-  font-size: 12px;
+  font-size: 0.8rem;
   margin: 0px;
-  padding: 0px;
-  padding-top:5px;
-  padding-left:0.2rem;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right:10px;
+  display: inline-block;
   text-transform: capitalize;
   color:var(--secondary-color); 
 }
@@ -76,8 +90,6 @@
     clear: none;
     text-align: right;
     color:var(--secondary-color);
-    padding:0;
-    margin:0;
     cursor: pointer;
 }
 
