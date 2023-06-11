@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --primary-color: #252525 !important;
+  --primary-color: linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%) !important;
   --secondary-color:#f8f8f8 !important;
   --pal0-color:#ff004f !important;
   --pal1-color: #ababab !important;
@@ -29,17 +29,21 @@
   grid-template-columns:  1fr 1fr;
 }
 
+.info {
+  color:var(--secondary-color);
+  background: var(--border1-color);
+  padding:5%;
+  margin:2%;
+  border-radius:10px;
+
+}
 #menu1 { 
   display: block;
-  padding:2%;
-  padding-top:10%;
   width: 100%;  
   border-right: 1px solid var(--border0-color);
   overflow-y: auto;
 }
 #menu2 { 
-  padding:2%;
-  padding-top:10%;
   color:var(--secondary-color);
 }
 

@@ -16,6 +16,9 @@
   "author": "Mahdi Madi",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "nedb": "^1.8.0",
+    "node-fetch": "^3.3.1"
   }
 }

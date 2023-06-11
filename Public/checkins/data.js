@@ -1,11 +1,9 @@
 // Geo Locate
-let lat, lon, acc, alt, altacc, speed;
+let lat, lon, acc, alt, altacc, speed /*weather, air*/;
+
 if ('geolocation' in navigator) {
   console.log('geolocation available');
   navigator.geolocation.getCurrentPosition(async position => {
-    // from Geolocation API
-    // from other APIs
-    //let  weather, air;
     try {
       lat = position.coords.latitude;
       lon = position.coords.longitude;
@@ -13,16 +11,12 @@ if ('geolocation' in navigator) {
       alt = position.coords.altitude;
       altacc = position.coords.altitudeAccuracy;
       speed = position.coords.speed;
-
-      console.log(position);
-
-
       document.getElementById('latitude').textContent = lat.toFixed(2);
       document.getElementById('longitude').textContent = lon.toFixed(2);
       document.getElementById('accuracy').textContent = acc.toFixed(2);
       document.getElementById('altitude').textContent = alt.toFixed(2);
       document.getElementById('altitudeaccuracy').textContent = altacc.toFixed(2);
-
+      document.getElementById('speed').textContent = speed.toFixed(2);
 
       /*
       const api_url = `weather/${lat},${lon}`;
@@ -39,12 +33,13 @@ if ('geolocation' in navigator) {
       */
     } catch (error) {
       console.error(error);
+      /*
       air = { value: -1 };
       document.getElementById('aq_value').textContent = 'NO READING';
+      */
     }
 
-// setting up routing 
-const data = { lat, lon, acc, alt, altacc /*weather, air*/ };
+    const data = { lat, lon, /*weather, air*/ };
     const options = {
       method: 'POST',
       headers: {

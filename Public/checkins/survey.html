@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey session</title>
+    <link rel="stylesheet" href="survey.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+  </head>
+  <body>
+
+    
+
+
+    <div class="wrap">
+
+       <div class="info">
+        <p>latitude: <span id="latitude"></span>&deg;</p>  
+        <p>longitude: <span id="longitude"></span>&deg;</p>
+        <p>altitude: <span id="altitude"></span></p>
+       </div>
+    <fieldset>
+        <legend>Name: <input id="name" placeholder="null"/></legend>
+    </fieldset>
+    <fieldset>
+        <legend>Type</legend>
+        <select id="type">
+            <option value="antimony-arsenic">antimony-arsenic</option>
+            <option value="barite-strontianite">barite-strontianite</option>
+            <option value="copper">copper</option>
+            <option value="fluorite">fluorite</option>
+            <option value="gaz">gaz</option>
+            <option value="iron">iron</option>
+            <option value="lignite">lignite</option>
+            <option value="manganese">manganese</option>
+            <option value="mercury">mercury</option>
+            <option value="petrol">petrol</option>
+            <option value="phosphate">phosphate</option>
+            <option value="plomb-zinc">plomb-zinc</option>
+            <option value="uranium">uranium</option>
+            <option value="vanadium">vanadium</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Category</legend>
+        <select id="category">
+            <option value="category 1">Category 1</option>
+            <option value="category 2">Category 2</option>
+            <option value="category 3">Category 3</option>
+            <option value="index"></option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Age</legend>
+        <select id="age">
+            <option value="quaternary">quaternary</option>
+            <option value="neogene">neogene</option>
+            <option value="miocene">miocene</option>
+            <option value="eocene-oligocene">eocene-oligocene</option>
+            <option value="eocene">eocene</option>
+            <option value="cretaceous-eocene">cretaceous-eocene</option>
+            <option value="jurassic">jurassic</option>
+            <option value="trias">trias</option>
+            <option value="permien">permien</option>
+            <option value="ordovician-triasic">ordovician-triasic</option>
+            <option value="ordovician">ordovician</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>structure</legend>
+        <select id="structure">
+            <option value="miocene basin">miocene basin</option>
+            <option value="Mole of GASRIN">Mole of GASRIn</option>
+            <option value="saharan platform">saharan platform</option>
+            <option value="the numidian fluysh">the numidian flysh</option>
+            <option value="cretaceous-tertiary basin">cretaceous-tertiary basin</option>
+            <option value="crystalline basement">crystalline basement</option>
+            <option value="eastern platform">eastern platform</option>
+            <option value="intracratonic basin">intracratonic basin</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>morphology</legend>
+        <select id="morphology">
+            <option value="Stratiform and peneconformable deposit">Stratiform and peneconformable deposit</option>
+            <option value="vein deposit">vein deposit</option>
+            <option value="deposit in heaps and various"> deposit in heaps and various </option>
+            <option value="petrol and gaz deposits">petrol and gaz deposits</option>
+        </select>
+    </fieldset>
+   <fieldset>
+    <legend>size: <input id="size" placeholder="size in T" value="null"/></legend>
+    <legend>reserve: <input id="reserve" placeholder="reserve in %" value="null"/></legend>
+    
+    <legend>status:
+        <select id="status">
+            <option value="in-operation">in-operation</option>
+            <option value="under-research">under-research</option>
+            <option value="unknown">unknown</option>
+        </select>
+    </legend>
+   </fieldset>
+    <fieldset>
+        <legend>additional notes:
+            <textarea id="notes" value="null" cols="80" rows="2"></textarea>  
+        </legend>
+    </fieldset>
+   
+    <button id="submit" class="css-button-rounded--sand">submit</button>
+
+    </div> 
+    <script src="survey.js"></script>
+    </body>
+</html>

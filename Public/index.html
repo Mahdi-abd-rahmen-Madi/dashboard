@@ -13,10 +13,9 @@
         <link rel="stylesheet" href="css/nouislider.min.css">
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
-        <link rel="stylesheet" href="Leaflet-MiniMap-master/src/Control.MiniMap.css">
-        <link rel="stylesheet" href="leaflet.fullscreen-master/Control.FullScreen.css">
+        <link rel="stylesheet" href="extensions/Leaflet-MiniMap-master/src/Control.MiniMap.css">
+        <link rel="stylesheet" href="extensions/leaflet.fullscreen-master/Control.FullScreen.css">
         <script src="https://kit.fontawesome.com/97a93053e0.js" crossorigin="anonymous"></script>
-        <script src="checkins/data.js"></script>
         <title>Dashboard</title>
     </head>
   <body>
@@ -38,9 +37,9 @@
       </div>
       <div id="nav-mobile-section">
         <div id="nav-link-section" class="nav-section">
-          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#about" class="source-link">ABOUT</a>
-          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#portfolio" class="source-link">WORK</a>
-          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#services" class="source-link">SERVICES</a>
+          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#about" class="source-link" title="about me" target="_blank">ABOUT</a>
+          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#portfolio" class="source-link" title="My portfolio page" target="_blank">WORK</a>
+          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#services" class="source-link" title="My services" target="_blank">SERVICES</a>
         </div>
         <div id="nav-social-section" class="nav-section">
           <a href="https://www.linkedin.com/in/mahdi-madi-a835a0188/" title="linkedin"target="_blank" alt="linkedin">
@@ -49,12 +48,11 @@
           <a href="https://github.com/Mahdi-abd-rahmen-Madi" title="GitHub" target="_blank" alt="github">
             <i class="fa-brands fa-github"></i>
           </a>    
-          <a href="mailto:mahdiabderrahmen@duck.com" title="Reach out via email" alt="email">
             <i class="fa-regular fa-envelope fa-bounce"></i>
           </a>
         </div>
         <div id="nav-contact-section" class="nav-section">
-          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#contact" title="send a request" class="source-link">GET IN TOUCH</a>
+          <a href="https://mahdi-abd-rahmen-madi.github.io/portfolio/#contact" target="_blank" title="send a request" class="source-link">GET IN TOUCH</a>
         </div>
       </div>
       <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
@@ -71,12 +69,14 @@
         <!---------------------------- content : filter div         --------------------------------------------------->
         <div id="menu1"></div>
         <div id="menu2">
-          <div>
+          <div class="info">
             <p>Current latitude: <span id="latitude"></span>&deg;</p>
             <p>Current longitude: <span id="longitude"></span>&deg;</p>
             <p>with an accuracy of: <span id="accuracy"></span></p>
             <p>Current altitude: <span id="altitude"></span></p>
             <p>with an altitude accuracy of: <span id="altitudeaccuracy"></span></p>
+            <p>and a speed of: <span id="speed"></span></p>
+
 
 
 
@@ -171,9 +171,12 @@
     <script src="data/deposits_2.js"></script>
     <script src="data/faults_3.js"></script>
     <script src="app.js"></script>
-    <script src ="filters.js"></script>
-    <script src="Leaflet-MiniMap-master/src/Control.MiniMap.js" type="text/javascript"></script>
-    <script src="leaflet.fullscreen-master/Control.FullScreen.js"></script>
+    <script src="filters.js"></script>
+    <script src="checkins/data.js"></script>
+    <!-- Extension loads-->
+    <script src="extensions/Leaflet-MiniMap-master/src/Control.MiniMap.js" type="text/javascript"></script>
+    <script src="extensions/leaflet.fullscreen-master/Control.FullScreen.js"></script>
+    <script src="extensions/leaflet.browser.print-master/dist/leaflet.browser.print.min.js"></script>
     <script>
     // =================================================================== highlight features ===============================================
     var highlightLayer;
@@ -1497,7 +1500,7 @@
         col1.id = "mapWindow";
         col1.style.height = "100%";
         col1.style.width = "100%";
-        col1.style.display = "block";    
+        col1.style.display = "inline-block";    
 
         var col2 = document.createElement('div');
         col2.className="col3";
@@ -1515,7 +1518,16 @@
         basemapURL = "https://api.maptiler.com/maps/ocean/256/{z}/{x}/{y}.png?key=8ZzgJSc08kWBO8wU7Pde";
         var ocean= new L.tileLayer(basemapURL, {minZoom:0,maxZoom:19});
         var miniMap =  new L.Control.MiniMap(ocean, {toggleDisplay: true,position: 'bottomright'}).addTo(map);
+
+        // Print 
         
+        var options = {position:'topleft', printModes: ["Portrait", "Landscape", "Auto", "Custom"]}
+        var browserControl = L.control.browserPrint(options).addTo(map);
+        
+
+        
+
+
         </script>
 
       </main>

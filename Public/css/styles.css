@@ -1,6 +1,7 @@
 :root {
-  --primary-color: #252525 !important;
+  --primary-color: linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%) !important;
   --secondary-color:#f8f8f8 !important;
+  --txt-color: #252525 !important;
   --pal0-color:#ff004f !important;
   --pal1-color: #ababab;
   --border0-color : rgba(255, 255, 255, 0.12);
@@ -32,7 +33,7 @@ body {
   width:100%;
   height:100%;
   font-display: optional;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 main {
@@ -59,7 +60,7 @@ img {display:flex;
 
 /* ======================================================= contetn : Preloader  ============================================= */
 #preloader {
-  background:var(--primary-color);
+  background:var(--txt-color);
   height:100vh;
   width:100%;
   position:fixed;
@@ -80,7 +81,7 @@ img {display:flex;
   height: 100%;
   position: absolute;
   width: 100%;
-  border: 3.5px solid var(--highlight-color);
+  border: 3.5px solid var(--hover0-color);
 }
 .spinner div:nth-of-type(1) {
   transform: translateZ(-35.2px) rotateY(180deg);
@@ -146,9 +147,10 @@ nav {
   display: flex;
   height:6%;
   width: 100%;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color:var(--secondary-color);
   border-bottom: 1px solid var(--border0-color);
+  overflow:hidden;
 }
 
 nav .nav-section {
@@ -331,7 +333,7 @@ main > article > .article-title-section * {
 main > article > .article-title-section > h2 {
   flex-basis: 80%;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.2rem;
   margin: 0px;
   text-transform: capitalize;
@@ -462,7 +464,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   
   #nav-mobile-section {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     flex-direction: column;
     height: 100vh;
     width: 100vw;
@@ -485,11 +487,17 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   
   #nav-social-section > a {
-    font-size: 2rem; 
+    font-size: 2rem;
+    display:flex;
+    align-items:center;
+    place-content: center; 
+    padding:2%;
+    scale:2.5;
   }  
   
   #nav-contact-section {
     padding-bottom: 4rem;
+    scale:1.5;
   }
   
   main > article {
