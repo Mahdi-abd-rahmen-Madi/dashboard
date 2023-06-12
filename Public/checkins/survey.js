@@ -6,6 +6,7 @@ function setup() {
     video.size(160, 120);
     */
     let lat, lon, alt;
+    let agent = "surveyor";
     const button = document.getElementById('submit');
     button.addEventListener('click', async event => {
         const name = document.getElementById("name").value;
@@ -22,7 +23,7 @@ function setup() {
         video.loadPixels();
       const image64 = video.canvas.toDataURL();
       */
-      const data = { lat, lon, alt, name, type, category, age, structure, morphology, size, reserve, status, notes/*image64*/ };
+      const data = { agent, lat, lon, alt, name, type, category, age, structure, morphology, size, reserve, status, notes/*image64*/ };
       const options = {
         method: 'POST',
         headers: {
@@ -41,7 +42,7 @@ function setup() {
         lat = position.coords.latitude;
         lon = position.coords.longitude;
         alt = position.coords.altitude;
-        console.log(lat, lon);
+        console.log(lat, lon, alt);
         document.getElementById('latitude').textContent = lat;
         document.getElementById('longitude').textContent = lon;
         document.getElementById('altitude').textContent = alt;

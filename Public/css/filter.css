@@ -27,27 +27,56 @@
 #sidemenu {
   display:grid;
   grid-template-columns:  1fr 1fr;
+  color:var(--secondary-color);
+  
 }
 
 .info {
   color:var(--secondary-color);
   background: var(--border1-color);
   padding:5%;
-  margin:2%;
+  margin:1%;
   border-radius:10px;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(13.4px);
+  -webkit-backdrop-filter: blur(13.4px);
+  border-radius: 10px;
+
 
 }
 #menu1 { 
-  display: block;
+  display:block;
   width: 100%;  
   border-right: 1px solid var(--border0-color);
   overflow-y: auto;
+  
 }
-#menu2 { 
+
+#menu2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 2fr;
+  width:100%;
+}
+
+
+.chart {
+  width:99%;
+  height:48%;
   color:var(--secondary-color);
+  background: var(--border1-color);
+  border-radius:10px;
+  margin:1%;
+  margin-bottom:0.25%;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(13.4px);
+  -webkit-backdrop-filter: blur(13.4px);
+  border-radius: 10px;
+  
+
 }
-
-
 
 .filterselect{
   padding:none;
@@ -56,17 +85,27 @@
 .filterselect input, .filterselect select {
     display: inline-block;
     width: 100%;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     border: none;
     margin: none;
-    padding:none;
+    padding:2px;
     padding-left:5px;
-    cursor:pointer;    
-    background-color: var(--border2-color);
+    cursor:pointer;
+    color:var(--secondary-color);    
+    background: rgba(255,255,255,0.1);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(13.4px);
+    -webkit-backdrop-filter: blur(13.4px);
+    border-radius: 10px;
+
 }
 
 .filterselect input:hover, .filterselect select:hover {
-  background-color: var(--hover0-color);
+  background: rgba(255,255,255,0.3);
+  scrollbar-width: thin;
+  scrollbar-color:rgba(255,255,255,1);
+  scroll-padding: 2rem;
+ 
 
 }
 
@@ -93,15 +132,22 @@
 .filterlabel + .filterlabel {
     clear: none;
     text-align: right;
+    margin-top: 1px;
     color:var(--secondary-color);
     cursor: pointer;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    backdrop-filter: blur(13.4px);
+    -webkit-backdrop-filter: blur(13.4px);
+    border-radius: 10px;
+
+    border-radius: 10px;
 }
 
 
 .filterlabel + .filterlabel:hover {
-    color:var(--hover0-color);
-    background-color:var(--border1-color);
-
+  color:var(--hover0-color);
+  background: rgba(255,255,255,0.1);
 }
 
 .slider {

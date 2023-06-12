@@ -17,7 +17,7 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 }
 
 *,::before,::after {
@@ -124,7 +124,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0px;
+  width:100vw;
+  margin: 0;
   padding:0;
   overflow: hidden;
 }
@@ -133,7 +134,7 @@ body {
   box-sizing: border-box;
   font-family:  "Libre Baskerville", serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
   Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial;
-  font-size:0.95rem;
+  font-size:1rem;
 }
 
 
@@ -188,6 +189,12 @@ nav .nav-section {
 #nav-toggle-button:hover,
 #nav-toggle-button:hover > span {
   color: var(--hover0-color);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(13.4px);
+  -webkit-backdrop-filter: blur(13.4px);
+  border-radius: 10px;
+
 }
 
 #nav-toggle-button > span,
@@ -318,6 +325,7 @@ main > article > .article-description-section > p {
 
 main > article > .article-description-section > p  > a:hover {
   text-decoration: underline;
+  
 }
 
 main > article > .article-title-section {
@@ -334,7 +342,7 @@ main > article > .article-title-section > h2 {
   flex-basis: 80%;
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
-  line-height: 1.2rem;
+  line-height: 3.5rem;
   margin: 0px;
   text-transform: capitalize;
 }
@@ -348,10 +356,16 @@ main > article > .article-nav-section > .article-nav-button {
   color:rgba(255, 255, 255, 0.75);
   font-size: 3rem;
   cursor: pointer;
+  
 }
 
 main > article > .article-nav-section > .article-nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.04);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(13.4px);
+  -webkit-backdrop-filter: blur(13.4px);
+  border-radius: 10px;
+
 }
 
 main > article > .article-nav-section > .article-nav-button:nth-child(2) {
@@ -359,7 +373,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 }
 
 .article-nav-button > i:hover {
-  scale: 1.5;
+  scale: 1.1;
 }
  
 

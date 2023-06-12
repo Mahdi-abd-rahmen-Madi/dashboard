@@ -1,5 +1,6 @@
 // Geo Locate
 let lat, lon, acc, alt, altacc, speed /*weather, air*/;
+let agent="user";
 
 if ('geolocation' in navigator) {
   console.log('geolocation available');
@@ -17,6 +18,10 @@ if ('geolocation' in navigator) {
       document.getElementById('altitude').textContent = alt.toFixed(2);
       document.getElementById('altitudeaccuracy').textContent = altacc.toFixed(2);
       document.getElementById('speed').textContent = speed.toFixed(2);
+
+
+      if(alt = 'null'){document.getElementById('altitude').textContent = "Unknown"};
+
 
       /*
       const api_url = `weather/${lat},${lon}`;
@@ -39,7 +44,7 @@ if ('geolocation' in navigator) {
       */
     }
 
-    const data = { lat, lon, /*weather, air*/ };
+    const data = { agent, lat, lon, alt/*weather, air*/ };
     const options = {
       method: 'POST',
       headers: {

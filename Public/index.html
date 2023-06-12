@@ -48,6 +48,7 @@
           <a href="https://github.com/Mahdi-abd-rahmen-Madi" title="GitHub" target="_blank" alt="github">
             <i class="fa-brands fa-github"></i>
           </a>    
+          <a href="mailto:mahdiabderrahmen@duck.com" title="Email me" target="_blank" alt="email">
             <i class="fa-regular fa-envelope fa-bounce"></i>
           </a>
         </div>
@@ -72,14 +73,11 @@
           <div class="info">
             <p>Current latitude: <span id="latitude"></span>&deg;</p>
             <p>Current longitude: <span id="longitude"></span>&deg;</p>
-            <p>with an accuracy of: <span id="accuracy"></span></p>
             <p>Current altitude: <span id="altitude"></span></p>
-            <p>with an altitude accuracy of: <span id="altitudeaccuracy"></span></p>
-            <p>and a speed of: <span id="speed"></span></p>
-
-
-
-
+          </div>
+          <div class="charts">
+              <canvas class="chart" id="chart1"></canvas>
+              <canvas class="chart" id="chart2"></canvas>
           </div>
         </div>
       </div>
@@ -177,7 +175,11 @@
     <script src="extensions/Leaflet-MiniMap-master/src/Control.MiniMap.js" type="text/javascript"></script>
     <script src="extensions/leaflet.fullscreen-master/Control.FullScreen.js"></script>
     <script src="extensions/leaflet.browser.print-master/dist/leaflet.browser.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js" integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+
+
     // =================================================================== highlight features ===============================================
     var highlightLayer;
         function highlightFeature(e) {
@@ -1526,9 +1528,12 @@
         
 
         
+        
 
 
         </script>
+     
+        
 
       </main>
    

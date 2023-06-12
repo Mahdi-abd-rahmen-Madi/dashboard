@@ -14,10 +14,12 @@ app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
 const database = new Datastore('database.db');
+const surveydatabase = new Datastore('surveys.db');
 database.loadDatabase();
+surveydatabase.loadDatabase();
 
 app.get('/api', (request, response) => {
-  database.find({}, (err, data) => {
+  surveydatabase.find({}, (err, data) => {
     if (err) {
       response.end();
       return;
