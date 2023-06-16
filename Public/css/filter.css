@@ -61,22 +61,6 @@
 }
 
 
-.chart {
-  width:99%;
-  height:48%;
-  color:var(--secondary-color);
-  background: var(--border1-color);
-  border-radius:10px;
-  margin:1%;
-  margin-bottom:0.25%;
-  background: rgba(255,255,255,0.1);
-  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  backdrop-filter: blur(13.4px);
-  -webkit-backdrop-filter: blur(13.4px);
-  border-radius: 10px;
-  
-
-}
 
 .filterselect{
   padding:none;

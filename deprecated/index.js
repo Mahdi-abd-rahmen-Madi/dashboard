@@ -13,7 +13,7 @@ app.listen(port, () => {
 app.use(express.static('public'));
 
 // Parse incoming data as json
-app.use(express.json({ limit: '10mb' }));
+app.use(express.json({ limit: '1mb' }));
 
 // create Type 2 database : persistent datastore with manual loading
 const database = new Datastore('database.db');

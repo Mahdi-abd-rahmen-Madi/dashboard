@@ -20,8 +20,6 @@ if ('geolocation' in navigator) {
       document.getElementById('speed').textContent = speed.toFixed(2);
 
 
-      if(alt = 'null'){document.getElementById('altitude').textContent = "Unknown"};
-
 
       /*
       const api_url = `weather/${lat},${lon}`;
@@ -36,8 +34,11 @@ if ('geolocation' in navigator) {
       document.getElementById('aq_units').textContent = air.unit;
       document.getElementById('aq_date').textContent = air.lastUpdated;
       */
+
     } catch (error) {
       console.error(error);
+
+      document.getElementById('altitude').textContent = "NO READING";
       /*
       air = { value: -1 };
       document.getElementById('aq_value').textContent = 'NO READING';
