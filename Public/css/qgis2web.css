@@ -1,16 +1,3 @@
-:root {
-    --primary-color: #252525 !important;
-    --secondary-color:#f8f8f8 !important;
-    --pal0-color:#ff004f !important;
-    --pal1-color: #ababab;
- 
-    --border1-color:#1b9bff !important;
-  
-    --hover0-color:#a3f1a4 !important;
-    --hover1-color:#8A2EFF !important;
-    --hover2-color:rgba(233,40,201,0.8) !important;  
-  }
-
 #map {
     background-color: var(--secondary-color);
 }

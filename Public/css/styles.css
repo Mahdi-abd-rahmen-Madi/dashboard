@@ -1,18 +1,20 @@
+@import url(https://fonts.bunny.net/css);
 :root {
   --primary-color: linear-gradient(108.08deg, #BBD2C5 0.53%, #536976 52.86%, #292E49 100%) !important;
   --secondary-color:#f8f8f8 !important;
-  --txt-color: #252525 !important;
   --pal0-color:#ff004f !important;
-  --pal1-color: #ababab;
-  --border0-color : rgba(255, 255, 255, 0.12);
-  --border1-color : rgba(255,255,255,.4);
-  --border2-color : rgba(255,255,255,.8);
+  --pal1-color: #ababab !important;
+  --border0-color : rgba(255, 255, 255, 0.12)!important;
+  --border1-color : rgba(255,255,255,.4)!important;
+  --border2-color : rgba(255,255,255,.8)!important;
   
-  --border3-color:#1b9bff !important;
-
   --hover0-color:#a3f1a4 !important;
   --hover1-color:#8A2EFF !important;
-  --hover2-color:rgba(233,40,201,0.8) !important;  
+  --hover2-color:rgba(233,40,201,0.8) !important;
+  --border4-color:#1b9bff !important;
+
+  --bg1-color : rgba(163, 241, 164, 0.25);
+  
 }
 
 html {
@@ -245,7 +247,7 @@ main > article {
   position: absolute;
   left: 0px;
   top: 0px;
-  transition: transform 400ms ease;  
+  transition: transform 400ms ease-in-out;  
 }
 
 main > article[data-status="inactive"] {
@@ -300,23 +302,30 @@ display:block;
 
 .mini-chart {
   width:99%;
-  height:60%;
+  height:100%;
   color:var(--secondary-color);
   border-radius:10px;
-  margin:1%;
-  margin-bottom:0.25%;
+  margin:0%;
+  margin-left: 1%;
+  margin-bottom:4%;
   background: rgba(255,255,255,0.7);
   box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
   backdrop-filter: blur(13.4px);
   -webkit-backdrop-filter: blur(13.4px);
-  border-radius: 10px;
-  
+  border-radius: 20px;
+}
+
+.mini-chart:hover {
+  cursor: pointer;
+  background: rgba(255,255,255,0.75);
+
+
 }
 
 
 .chart {
-  width:99%;
-  height:720px;
+  width:90%;
+  height:90%;
   color:var(--secondary-color);
   border-radius:10px;
   margin:3%;
@@ -375,7 +384,7 @@ main > article > .article-title-section * {
 
 main > article > .article-title-section > h2 {
   flex-basis: 80%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Angkor", sans-serif;
   font-size: 2.5rem;
   line-height: 3.5rem;
   margin: 0px;
@@ -411,6 +420,16 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   scale: 1.1;
 }
  
+#nav-contact-section:hover {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(13.4px);
+  -webkit-backdrop-filter: blur(13.4px);
+  border-radius: 10px;
+
+
+}
+
 
 /* media queries for tablets : */
 
